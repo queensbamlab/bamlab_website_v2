@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_exportFolderName: "nextImageExportOptimizer",
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
+    nextImageExportOptimizer_basePath: "/bamlab_website_v2",
   },
 };
 
