@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: "export", // <=== enables static exports
   reactStrictMode: true,
+  basePath: "/bamlab_website_v2",
+  assetPrefix: "/bamlab_website_v2",
 
   images: {
     unoptimized: true,
