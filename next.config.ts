@@ -1,11 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   /* config options here */
   output: "export", // <=== enables static exports
   reactStrictMode: true,
-  basePath: "/bamlab_website_v2",
-  assetPrefix: "/bamlab_website_v2",
+  basePath: "",
+  assetPrefix: "",
 
   images: {
     unoptimized: true,
@@ -24,7 +26,7 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
     storePicturesInWEBP: "true",
     generateAndUseBlurImages: "true",
-    NEXT_PUBLIC_BASE_PATH: "/bamlab_website_v2",
+    NEXT_PUBLIC_BASE_PATH: "",
   },
 };
 
