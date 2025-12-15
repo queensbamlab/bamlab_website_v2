@@ -3,6 +3,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { getImagePath } from "@/lib/utils";
 
 import {
   Card,
@@ -41,24 +42,24 @@ import { News } from "@/lib/news";
 import type { EnrichedPublication } from "./publications/page.client";
 
 const logos = [
-  "/imgs/logos/CAC-logo.png",
-  "/imgs/logos/CFI-logo.png",
-  "/imgs/logos/cimvhr-logo.png",
-  "/imgs/logos/CM-logo.png",
-  "/imgs/logos/cutric-logo.svg",
-  "/imgs/logos/DRAC-logo.svg",
-  "/imgs/logos/gnowit-logo.png",
-  "/imgs/logos/ibm-logo.png",
-  "/imgs/logos/Mitacs-logo.png",
-  "/imgs/logos/MT-logo.png",
-  "/imgs/logos/NF-logo.png",
-  "/imgs/logos/NSERC-logo.png",
-  "/imgs/logos/OCI-logo.webp",
-  "/imgs/logos/pfizer-logo.svg",
-  "/imgs/logos/QU-logo.png",
-  "/imgs/logos/Roche-logo.png",
-  "/imgs/logos/SOSCIP-logo.png",
-  "/imgs/logos/UM-logo.png",
+  getImagePath("/imgs/logos/CAC-logo.png"),
+  getImagePath("/imgs/logos/CFI-logo.png"),
+  getImagePath("/imgs/logos/cimvhr-logo.png"),
+  getImagePath("/imgs/logos/CM-logo.png"),
+  getImagePath("/imgs/logos/cutric-logo.svg"),
+  getImagePath("/imgs/logos/DRAC-logo.svg"),
+  getImagePath("/imgs/logos/gnowit-logo.png"),
+  getImagePath("/imgs/logos/ibm-logo.png"),
+  getImagePath("/imgs/logos/Mitacs-logo.png"),
+  getImagePath("/imgs/logos/MT-logo.png"),
+  getImagePath("/imgs/logos/NF-logo.png"),
+  getImagePath("/imgs/logos/NSERC-logo.png"),
+  getImagePath("/imgs/logos/OCI-logo.webp"),
+  getImagePath("/imgs/logos/pfizer-logo.svg"),
+  getImagePath("/imgs/logos/QU-logo.png"),
+  getImagePath("/imgs/logos/Roche-logo.png"),
+  getImagePath("/imgs/logos/SOSCIP-logo.png"),
+  getImagePath("/imgs/logos/UM-logo.png"),
 ];
 
 const ClientPage = ({
@@ -80,7 +81,7 @@ const ClientPage = ({
               className="rounded-lg px-4 py-2 space-x-2"
             >
               <ExportedImage
-                src={`/imgs/queens_logo_cropped.png`}
+                src={getImagePath(`/imgs/queens_logo_cropped.png`)}
                 alt="Queen's University Logo"
                 width={100}
                 height={50}
@@ -114,7 +115,7 @@ const ClientPage = ({
 
           <div className="relative w-full lg:max-w-xl h-auto aspect-video shadow-xl rounded-md overflow-hidden border border-border/50">
             <ExportedImage
-              src={`/imgs/queens_university.jpg`}
+              src={getImagePath(`/imgs/queens_university.jpg`)}
               fill
               alt="Queen's University"
               className="object-cover hover:scale-105 transition-transform duration-700"
@@ -300,7 +301,7 @@ const ClientPage = ({
 
             <div className="relative w-full lg:max-w-xl h-auto aspect-video shadow-lg rounded-md overflow-hidden">
               <ExportedImage
-                src={`/imgs/bamlab_people.png`}
+                src={getImagePath(`/imgs/bamlab_people.png`)}
                 fill
                 alt="BAM Lab Picnic"
                 className="object-cover"
@@ -336,8 +337,8 @@ const ClientPage = ({
                     <ExportedImage
                       src={
                         News[0].image
-                          ? `/${News[0].image}`
-                          : `/imgs/meeting.png`
+                          ? getImagePath(`/${News[0].image}`)
+                          : getImagePath(`/imgs/meeting.png`)
                       }
                       alt={News[0].title}
                       fill
@@ -376,8 +377,8 @@ const ClientPage = ({
                       <ExportedImage
                         src={
                           News[0].image
-                            ? `/${News[0].image}`
-                            : `/imgs/meeting.png`
+                            ? getImagePath(`/${News[0].image}`)
+                            : getImagePath(`/imgs/meeting.png`)
                         }
                         alt={News[0].title}
                         fill
@@ -425,7 +426,7 @@ const ClientPage = ({
                       <div className="relative aspect-16/10 lg:aspect-4/3 overflow-hidden rounded-md mb-4 bg-muted">
                         <ExportedImage
                           src={
-                            news.image ? `/${news.image}` : `/imgs/meeting.png`
+                            news.image ? getImagePath(`/${news.image}`) : getImagePath(`/imgs/meeting.png`)
                           }
                           alt={news.title}
                           fill

@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
+import { getImagePath } from "@/lib/utils";
 
 import { Mail, Globe, Linkedin } from "lucide-react";
 
@@ -19,7 +20,7 @@ const PersonCard = ({ person }: { person: PersonProps }) => {
       <div className="aspect-square relative bg-muted">
         <ExportedImage
           src={
-            person.image ? `${person.image}` : `/imgs/people/placeholder.png`
+            person.image ? getImagePath(person.image) : getImagePath(`/imgs/people/placeholder.png`)
           }
           alt={person.name}
           fill

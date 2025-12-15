@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import ExportedImage from "next-image-export-optimizer";
+import { getImagePath } from "@/lib/utils";
 
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -59,7 +60,7 @@ const DirectorPage = () => {
           <div className="sticky top-24">
             <div className="aspect-square relative rounded-lg overflow-hidden bg-muted mb-6 w-full">
               <ExportedImage
-                src={`/imgs/zulkernine.jpg`}
+                src={getImagePath(`/imgs/zulkernine.jpg`)}
                 alt={director.full_title}
                 fill
                 className="object-cover"

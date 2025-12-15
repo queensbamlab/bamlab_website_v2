@@ -14,6 +14,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function getImagePath(src: string) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return `${basePath}${src}`;
+}
+
 export function chunkAlternating(items: string[]) {
   const result = [];
   let i = 0;

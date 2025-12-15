@@ -5,6 +5,7 @@ import MainNav from "./main-nav";
 import { MobileNav } from "./mobile-nav";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
+import { getImagePath } from "@/lib/utils";
 
 const SiteHeader = () => {
   return (
@@ -14,7 +15,7 @@ const SiteHeader = () => {
           <MobileNav className="flex lg:hidden" items={siteConfig.navItems} />
           <Link href="/" className="flex">
             <ExportedImage
-              src="/imgs/logos/bam_logo_short.png"
+              src={getImagePath("/imgs/logos/bam_logo_short.png")}
               alt="Logo"
               width={150}
               height={180}

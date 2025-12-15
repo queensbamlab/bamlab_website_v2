@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { News } from "@/lib/news";
 import { Calendar } from "lucide-react";
 import ExportedImage from "next-image-export-optimizer";
+import { getImagePath } from "@/lib/utils";
 
 import {
   Dialog,
@@ -59,8 +60,8 @@ const Page = () => {
                   <ExportedImage
                     src={
                       featuredNews[0].image
-                        ? `/${featuredNews[0].image}`
-                        : `/imgs/meeting.png`
+                        ? getImagePath(`/${featuredNews[0].image}`)
+                        : getImagePath(`/imgs/meeting.png`)
                     }
                     alt={featuredNews[0].title}
                     fill
@@ -94,8 +95,8 @@ const Page = () => {
                   <ExportedImage
                     src={
                       featuredNews[0].image
-                        ? `/${featuredNews[0].image}`
-                        : `/imgs/meeting.png`
+                        ? getImagePath(`/${featuredNews[0].image}`)
+                        : getImagePath(`/imgs/meeting.png`)
                     }
                     alt={featuredNews[0].title}
                     fill
@@ -231,7 +232,7 @@ const Page = () => {
                 <Card className="rounded-md group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
                   <div className="relative aspect-16/10 lg:aspect-4/3 overflow-hidden">
                     <ExportedImage
-                      src={item.image ? `/${item.image}` : `/imgs/meeting.png`}
+                      src={item.image ? getImagePath(`/${item.image}`) : getImagePath(`/imgs/meeting.png`)}
                       alt={item.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -262,7 +263,7 @@ const Page = () => {
                 <div>
                   <div className="relative aspect-16/10 lg:aspect-4/3 overflow-hidden">
                     <ExportedImage
-                      src={item.image ? `/${item.image}` : `/imgs/meeting.png`}
+                      src={item.image ? getImagePath(`/${item.image}`) : getImagePath(`/imgs/meeting.png`)}
                       alt={item.title}
                       fill
                       className="object-cover"
