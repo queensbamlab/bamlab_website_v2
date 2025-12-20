@@ -16,7 +16,7 @@ const SiteFooter = () => {
             className="w-16 h-20 mb-2"
           />
           <p className="font-serif text-xs text-muted-foreground max-w-xs">
-            Big-Data and Analytics Management Lab at Queen's University
+            Big-Data and Analytics Management Lab at Queen&apos;s University
           </p>
         </div>
 
