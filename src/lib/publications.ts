@@ -21,6 +21,7 @@ export interface PublicationProps {
   award?: string;
   abstract?: string;
   link?: string;
+  accepted?: boolean; // New field to indicate if paper is accepted but not yet published
 }
 
 export const Publications: PublicationProps[] = [

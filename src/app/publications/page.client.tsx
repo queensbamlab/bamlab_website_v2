@@ -309,7 +309,11 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
       <CardContent className="space-y-4">
         <div className="text-sm text-muted-foreground">
           <span className="font-medium">
-            {pub.type !== "Book" ? "Published in:" : "Published by:"}
+            {pub.accepted
+              ? "Accepted in:"
+              : pub.type !== "Book"
+                ? "Published in:"
+                : "Published by:"}
           </span>{" "}
           {pub.venue}
           {pub.workshop && (

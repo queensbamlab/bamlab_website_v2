@@ -4,6 +4,7 @@ interface NewsProps {
   image?: string;
   description?: string;
   featured: boolean;
+  term?: string; // For grants: e.g., "2025-2028"
 }
 
 interface EventProps {
@@ -17,29 +18,29 @@ interface EventProps {
 
 export const upcomingEvents: EventProps[] = [
   {
-    date: "April 5, 2026",
+    date: "Apr 2026",
     title: "Guest Lecture: AI Ethics in Research",
     time: "2:00 PM - 4:00 PM",
     location: "Goodwin Hall, Room 524",
     speaker: "Dr. Emily Watson, University of Toronto",
   },
   {
-    date: "January 12, 2026",
+    date: "Jan 2026",
     title: "BAM Lab Research Seminar",
     time: "10:00 AM - 12:00 PM",
     location: "Online (Zoom)",
     speaker: "PhD Candidate Presentations",
   },
   {
-    date: "December 20, 2026",
-    endDate: "December 22, 2026",
+    date: "Dec 2026",
+    endDate: "Dec 2026",
     title: "Workshop on Big Data in Healthcare",
     time: "9:00 AM - 5:00 PM",
     location: "Queen's University Conference Centre",
     speaker: "Multiple Speakers",
   },
   {
-    date: "December 7, 2026",
+    date: "Dec 2026",
     title: "Industry Partner Showcase",
     time: "1:00 PM - 6:00 PM",
     location: "Innovation Park",
@@ -49,53 +50,65 @@ export const upcomingEvents: EventProps[] = [
 
 export const News: NewsProps[] = [
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2025",
+    title: "Connected Mind Team Grant: $1,500,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit, lectus a vehicula dapibus, ex diam efficitur felis, eget euismod.",
+      "Co-creating Intelligent Neuro-Technologies for Healthy Aging (CINTHeA). Source: CFREF Connected Mind Team Grant",
+    featured: true,
+    term: "2025-2028",
+  },
+  {
+    date: "Dec 2025",
+    title: "Paper Accepted at TMLR",
+    description:
+      "Our paper 'InfGraND: An Influence-Guided GNN-to-MLP Knowledge Distillation' has been accepted at Transactions on Machine Learning Research (TMLR).",
     featured: true,
   },
   {
-    date: "Mar 08, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2025",
+    title: "NSERC Discovery Grant Awarded: $210,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit, lectus a vehicula dapibus, ex diam efficitur felis, eget euismod.",
-    image: "imgs/bamlab_people.png",
-    featured: true,
+      "Dr. Zulkernine awarded NSERC Discovery Grant for 'Advancing Machine Perception for Situation-Aware Goal-Oriented Human Machine Interaction'. Source: NSERC Discovery",
+    featured: false,
+    term: "2025-2030",
   },
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Dec 2025",
+    title: "Paper Accepted at JMIR",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nibh eget diam finibus ornare a vitae tellus. Ut tempor.",
+      "Our paper 'A Multiagent Summarization and Auto-Evaluation Framework for Medical Text: Development and Evaluation Study' has been accepted to the Journal of Medical Internet Research (JMIR).",
     featured: false,
   },
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2025",
+    title: "Connected Mind Team Grant: $1,500,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis magna accumsan pretium dictum. Mauris posuere felis sit amet nunc ultricies interdum. Nam vel diam.",
+      "When People Talk, Listen Completely. Source: CFREF Connected Mind Team Grant",
     featured: false,
+    term: "2025-2028",
   },
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2025",
+    title: "Connected Mind Seed Grant: $75,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend luctus faucibus. Proin eu orci sit amet dui eleifend bibendum vel eget diam. Pellentesque eu.",
+      "Developing an AI-Based Tool for Optimizing Disability Accessibility of Pedestrian Networks in Marginalized Neighborhoods. Source: CFREF Connected Mind Seed Grant",
     featured: false,
+    term: "2025-2027",
   },
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2024",
+    title: "Queen's Multidisciplinary Health Sciences Grant: $50,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula luctus massa non volutpat. In euismod est eu mi iaculis hendrerit. Morbi hendrerit tempor ante.",
+      "Leveraging machine learning for competency-based medical education: A tool for facilitating decision making in resident progress and promotion assessments. Source: Queen's Annual Multidisciplinary DOR Health Sciences RG",
     featured: false,
+    term: "2024-2026",
   },
   {
-    date: "Mar 15, 2025",
-    title: "Lab receives NSERC Grant",
+    date: "Jan 2023",
+    title: "NFRF Exploration Grant: $250,000",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac semper tortor. Aliquam eget quam vestibulum, gravida sem non, facilisis dolor. Proin sed erat at.",
+      "Companion: A Cognitive Voice and Video Assistant Bot for Safe Aging. Source: NFRF Exploration",
     featured: false,
+    term: "2023-2027",
   },
 ];

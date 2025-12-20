@@ -1,14 +1,22 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+import ExportedImage from "next-image-export-optimizer";
+import { getImagePath } from "@/lib/utils";
 
 const SiteFooter = () => {
   return (
     <footer className="group-has-[.section-soft]/body:bg-surface/40 flex flex-col px-4 xl:px-6 max-w-7xl mx-auto ">
       <div className="container-wrapper border-y border-border py-4 sm:flex sm:flex-row justify-between space-y-8">
         <div>
-          <p className="text-sm font-semibold mb-2">BAM Lab Logo</p>
-          <p className="font-serif text-xs text-muted-foreground">
-            Mauris mi felis, porttitor eu auctor volutpat.
+          <ExportedImage
+            src={getImagePath("/imgs/logos/bam_logo_short.png")}
+            alt="BAM Lab Logo"
+            width={100}
+            height={120}
+            className="w-16 h-20 mb-2"
+          />
+          <p className="font-serif text-xs text-muted-foreground max-w-xs">
+            Big-Data and Analytics Management Lab at Queen's University
           </p>
         </div>
 
@@ -44,18 +52,6 @@ const SiteFooter = () => {
             <br className="sm:hidden" />
             All rights reserved.
           </p>
-          <div className="text-muted-foreground w-full px-1 text-center text-xs leading-loose sm:text-sm">
-            Built by{" "}
-            <Link
-              href={
-                "https://calicode.dev/?utm_source=bamlab_site&utm_medium=web&utm_campaign=footer_built_by_callout"
-              }
-              target="_blank"
-              className="font-medium underline underline-offset-4"
-            >
-              Calicode
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -74,7 +74,7 @@ const Page = () => {
                   </h3>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    {featuredNews[0].date}
+                    {featuredNews[0].term ? featuredNews[0].term : featuredNews[0].date}
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -128,7 +128,7 @@ const Page = () => {
                       <div className="space-y-4">
                         <div className="flex items-center gap-3 mb-2">
                           <span className="text-sm text-muted-foreground">
-                            {item.date}
+                            {item.term ? item.term : item.date}
                           </span>
                         </div>
                         <h3 className="text-lg font-semibold leading-tight group-hover:text-primary transition-colors">
@@ -241,7 +241,7 @@ const Page = () => {
                   <CardHeader className="space-y-3">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-4 w-4" />
-                      {item.date}
+                      {item.term ? item.term : item.date}
                     </div>
                     <CardTitle className="text-xl leading-tight group-hover:text-primary transition-colors">
                       {item.title}
