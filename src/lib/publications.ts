@@ -68,6 +68,26 @@ export const Publications: PublicationProps[] = [
     type: "Workshop",
   },
   {
+    year: 2025,
+    title: "Interpreting Biomedical VLMs on High-Imbalance Out-of-Distributions: An Insight into BiomedCLIP on Radiology",
+    authors: ["Sadman, N.", "Zulkernine, F.", "Kwan, B."],
+    venue:
+      "Knowledge Discovery in Databases (KDD)",
+    workshop:
+      "24th International Workshop on Data Mining in Bioinformatics",
+    type: "Workshop",
+    link: "https://arxiv.org/abs/2506.14136",
+  },
+   {
+    year: 2023,
+    title: "Vulnerability of Open-Source Face Recognition Systems to Blackbox Attacks: A Case Study with InsightFace",
+    authors: ["Sadman, N.", "Hasan, K. A.", "Rashno, E.", "Alaca, F.", "Tian, Y.", "Zulkernine, F."],
+    venue:
+      "IEEE Symposium on Computational Intelligence in Cyber Security (IEEE CICS)",
+    type: "Conference",
+    link: "https://ieeexplore.ieee.org/abstract/document/10371801",
+  },
+  {
     title:
       "Examining Feasibility and Efficacy of Traditional Stream Clustering Algorithms on Complex Human Activity Recognition Data",
 
@@ -78,6 +98,7 @@ export const Publications: PublicationProps[] = [
     type: "Conference",
     link: "https://doi.org/10.1109/COMPSAC57700.2023.00046",
   },
+  
   {
     year: 2024,
     title:
