@@ -26,6 +26,15 @@ export interface PublicationProps {
 
 export const Publications: PublicationProps[] = [
   {
+    year: 2026,
+    title: "DepthPulse+: A Depth and Vital Sign Based Method for Face Presentation Attack Detection",
+    authors: ["Sadman, N.",  "Alaca, F.",  "Zulkernine, F."],
+    venue:
+      "IEEE International Conference on Communications (ICC) (Communication and Information Systems Security)",
+    type: "Conference",
+    link: "TBD",
+  },
+  {
     year: 2025,
     title:
       "Depth-guided self-supervised human keypoint detection via cross-modal distillation",
