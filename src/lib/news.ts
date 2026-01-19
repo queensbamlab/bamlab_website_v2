@@ -50,6 +50,13 @@ export const upcomingEvents: EventProps[] = [
 
 export const News: NewsProps[] = [
   {
+    date: "Jan 2026",
+    title: "Paper Accepted at IEEE ICC (CISS)",
+    description:
+      "Nafiz Sadman (Ph.D. student), co-authored with Dr. Furkan Alaca and Dr. Farhana Zulkernine, published his Master's thesis titled 'DepthPulse+: A Depth and Vital Sign Based Method for Face Presentation Attack Detection' at IEEE International Conference on Communications (Track: Communications and Information Systems Security). Congratulations!",
+    featured: true,
+  },
+  {
     date: "Jan 2025",
     title: "Connected Mind Team Grant: $1,500,000",
     description:
