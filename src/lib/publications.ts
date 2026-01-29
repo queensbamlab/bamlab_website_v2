@@ -8,6 +8,15 @@ export const notableVenues: string[] = [
   "ICMLA",
   "ICDE",
   "BIBM",
+  "TMLR",
+  "Elsevier's Machine Learning with Applications",
+  "IEEE ICC (CISS)",
+  "IEEE CogMI",
+  "IEEE ICMLA",
+  "IEEE IEMCON",
+  "IEEE PICom",
+  "IEEE BIBM",
+  "IEEE BigData",
 ];
 
 export interface PublicationProps {
@@ -25,6 +34,30 @@ export interface PublicationProps {
 }
 
 export const Publications: PublicationProps[] = [
+  {
+    year: 2026,
+    title: "ASMa: Asymmetric Spatio-temporal Masking for Skeleton Action Representation Learning",
+    authors: ["Anand, A.", "Eskandari, A.", "Rashno, E.", "Zulkernine, F."],
+    venue: "Transactions on Machine Learning Research (TMLR)",
+    type: "Journal",
+    link: "https://openreview.net/forum?id=kIFo1q3VMS",
+  },
+  {
+    year: 2026,
+    title: "InfGraND: An Influence-Guided GNN-to-MLP Knowledge Distillation",
+    authors: ["Eskandari, A.","Anand, A.","Rashno, E.","Zulkernine, F."],
+    venue: "Transactions on Machine Learning Research (TMLR)",
+    type: "Journal",
+    link: "https://openreview.net/forum?id=lfzHR3YwlD",
+  },
+  {
+    year: 2026,
+    title: "SK-DGCNN: Human activity recognition from point cloud data with skeleton transformation",
+    authors: ["Zhang, Z.", "Anand, A.", "Zulkernine, F."],
+    venue: "Machine Learning with Applications",
+    type: "Journal",
+    link: "https://doi.org/10.1016/j.mlwa.2026.100022",
+  },
   {
     year: 2026,
     title: "DepthPulse+: A Depth and Vital Sign Based Method for Face Presentation Attack Detection",

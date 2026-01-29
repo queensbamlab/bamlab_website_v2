@@ -230,14 +230,6 @@ const Page = () => {
             <Dialog key={index}>
               <DialogTrigger asChild>
                 <Card className="rounded-md group overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
-                  <div className="relative aspect-16/10 lg:aspect-4/3 overflow-hidden">
-                    <ExportedImage
-                      src={item.image ? getImagePath(`/${item.image}`) : getImagePath(`/imgs/meeting.png`)}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
                   <CardHeader className="space-y-3">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar className="h-4 w-4" />
@@ -261,14 +253,6 @@ const Page = () => {
                   <DialogClose />
                 </DialogHeader>
                 <div>
-                  <div className="relative aspect-16/10 lg:aspect-4/3 overflow-hidden">
-                    <ExportedImage
-                      src={item.image ? getImagePath(`/${item.image}`) : getImagePath(`/imgs/meeting.png`)}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                   <p className="mt-2 font-serif text-sm">{item.description}</p>
                 </div>
               </DialogContent>

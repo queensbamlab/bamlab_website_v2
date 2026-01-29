@@ -329,17 +329,9 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
           )}
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant={"outline"}
-              data-umami-event={`Publication PDF Download`}
-            >
-              <FileText className="size-4 mr-2" />
-              PDF
-            </Button>
-            {pub.link && (
+        {pub.link && (
+          <div className="flex items-center justify-between">
+            <div className="flex gap-2">
               <Button
                 size="sm"
                 asChild
@@ -351,9 +343,9 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
                   Link
                 </Link>
               </Button>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </CardContent>
     </Card>
   );

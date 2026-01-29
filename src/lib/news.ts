@@ -51,10 +51,24 @@ export const upcomingEvents: EventProps[] = [
 export const News: NewsProps[] = [
   {
     date: "Jan 2026",
+    title: "Paper Accepted at TMLR",
+    description:
+      "Our paper 'ASMa: Asymmetric Spatio-temporal Masking for Skeleton Action Representation Learning' by Aman Anand, Amir Eskandari, Elyas Rashno, and Dr. Farhana Zulkernine has been accepted at Transactions on Machine Learning Research (TMLR).",
+    featured: true,
+  },
+  {
+    date: "Jan 2026",
+    title: "Paper Accepted at Elsevier's Machine Learning with Applications",
+    description:
+      "Our paper 'SK-DGCNN: Human activity recognition from point cloud data with skeleton transformation' by Zihan Zhang, Aman Anand, and Dr. Farhana Zulkernine has been accepted at Elsevier's Machine Learning with Applications journal.",
+    featured: false,
+  },
+  {
+    date: "Jan 2026",
     title: "Paper Accepted at IEEE ICC (CISS)",
     description:
       "Nafiz Sadman (Ph.D. student), co-authored with Dr. Furkan Alaca and Dr. Farhana Zulkernine, published his Master's thesis titled 'DepthPulse+: A Depth and Vital Sign Based Method for Face Presentation Attack Detection' at IEEE International Conference on Communications (Track: Communications and Information Systems Security). Congratulations!",
-    featured: true,
+    featured: false,
   },
   {
     date: "Jan 2025",
