@@ -124,11 +124,20 @@ const ClientPage = () => {
 
         <div className="space-y-12 mt-12">
           {Object.entries(PreviousPeople).map(([group, members]) => {
+            const groupLabels: Record<string, string> = {
+              faculty: "Faculty",
+              postdocs: "Postdocs",
+              phD: "PhD",
+              visitingPhD: "Visiting PhD Students",
+              masters: "Masters",
+              undergrad: "Undergrad",
+              highschool: "High School",
+            };
             if (members.length >= 1)
               return (
                 <section key={group}>
                   <h2 className="text-2xl font-bold mb-6 capitalize">
-                    {group}
+                    {groupLabels[group] ?? group}
                   </h2>
                   <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     {members.map((person) => (

@@ -123,13 +123,20 @@ export interface PreviousPeopleProps {
   faculty: PreviousPersonProps[];
   postdocs: PreviousPersonProps[];
   phD: PreviousPersonProps[];
+  visitingPhD: PreviousPersonProps[];
   masters: PreviousPersonProps[];
   undergrad: PreviousPersonProps[];
   highschool: PreviousPersonProps[];
 }
 
 export const PreviousPeople: Record<
-  "faculty" | "postdocs" | "phD" | "masters" | "undergrad" | "highschool",
+  | "faculty"
+  | "postdocs"
+  | "phD"
+  | "visitingPhD"
+  | "masters"
+  | "undergrad"
+  | "highschool",
   PreviousPersonProps[]
 > = {
   faculty: [],
@@ -195,7 +202,19 @@ export const PreviousPeople: Record<
         "Determining cost-effective resource configurations for executing data-intensive workloads in public clouds.",
     },
   ],
+  visitingPhD: [
+    {
+      name: "Federico Boscolo",
+      period: "Oct 2025 - Mar 2026",
+      type: "Visiting PhD Student (Italy)",
+      topic: "Gate and Facial Recognition.",
+    },
+  ],
   masters: [
+    {
+      name: "Tahosina Monir",
+      period: "Jan 2024 - Dec 2024",
+    },
     {
       name: "Jacqueline Chan",
       period: "2021-2025",
