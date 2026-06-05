@@ -36,6 +36,17 @@ export interface PublicationProps {
 export const Publications: PublicationProps[] = [
   {
     year: 2026,
+    title:
+      "PhysQual: A Quality-Aware Learning Framework for Robust Remote Photoplethysmography",
+    authors: ["Mohamad, F.", "Zulkernine, F.", "Sears, K."],
+    venue: "IEEE/ACM Conference on Connected Health (CHASE)",
+    specialIssue:
+      "Camera-ready version to be submitted for publication in Elsevier Smart Health Journal",
+    type: "Conference",
+    accepted: true,
+  },
+  {
+    year: 2026,
     title: "ElderBench: Benchmarking Personalized Open-Source LLMs for Older Adults",
     authors: [
       "Eskandari, A.",
