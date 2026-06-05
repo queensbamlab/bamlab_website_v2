@@ -36,6 +36,22 @@ export interface PublicationProps {
 export const Publications: PublicationProps[] = [
   {
     year: 2026,
+    title: "ElderBench: Benchmarking Personalized Open-Source LLMs for Older Adults",
+    authors: [
+      "Eskandari, A.",
+      "Tao, J.",
+      "Zulkernine, F.",
+      "Morningstar, M.",
+      "Poppenk, J.",
+      "Herrmann, B.",
+    ],
+    venue: "IEEE Annual Computers, Software, and Applications Conference (COMPSAC)",
+    workshop: "Symposium on Cognitive Robotic Systems",
+    type: "Conference",
+    accepted: true,
+  },
+  {
+    year: 2026,
     title: "ASMa: Asymmetric Spatio-temporal Masking for Skeleton Action Representation Learning",
     authors: ["Anand, A.", "Eskandari, A.", "Rashno, E.", "Zulkernine, F."],
     venue: "Transactions on Machine Learning Research (TMLR)",
