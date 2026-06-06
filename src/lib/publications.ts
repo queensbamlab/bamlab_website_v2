@@ -95,6 +95,43 @@ export const Publications: PublicationProps[] = [
     link: "TBD",
   },
   {
+    year: 2024,
+    title: "Revolutionizing healthcare management: architecture of a web-based medical triage service",
+    authors: ["Harby, A.A.", "ElKhodary, E.", "Almeida, R.", "Sharma, D.", "Zulkernine, F.", "Alaca, F.", "Elgazzar, K.", "Almarzouqi, A.", "Al-Yateem, N.", "Rahman, S.A."],
+    venue:
+      "IEEE 48th Annual Computers, Software, and Applications Conference (COMPSAC)",
+    type: "Conference",
+    link: "https://ieeexplore.ieee.org/abstract/document/10633674",
+  },
+    {
+    year: 2025,
+    title: "Data lakehouse: a survey and experimental study",
+    authors: ["Harby, A.A.", "Zulkernine, F."],
+    venue:
+      "Information Systems",
+    type: "Journal",
+    link: "https://www.sciencedirect.com/science/article/pii/S0306437924001182",
+  },
+  
+    {
+    year: 2026,
+    title: "Ai-guided vectorization for efficient storage and semantic retrieval of visual data",
+    authors: ["Harby, A.A.", "Zulkernine, F.", "Abdulsalam, H.M."],
+    venue:
+      "Discover Artificial Intelligence",
+    type: "Journal",
+    link: "https://link.springer.com/article/10.1007/s44163-025-00713-y",
+  },
+      {
+    year: 2026,
+    title: "SmartIngest: A Unified Framework for Adaptive Data Ingestion and Management in Lakehouse Architectures",
+    authors: ["Harby, A.A.", "Zulkernine, F."],
+    venue:
+      "International Conference on Big Data Analytics and Knowledge Discovery.",
+    type: "Conference",
+    link: "TBD",
+  },
+  {
     year: 2025,
     title:
       "Depth-guided self-supervised human keypoint detection via cross-modal distillation",
