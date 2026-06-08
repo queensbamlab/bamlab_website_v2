@@ -170,6 +170,7 @@ const ClientPage = ({
                 <SelectItem value="Journal">Journals</SelectItem>
                 <SelectItem value="Conference">Conferences</SelectItem>
                 <SelectItem value="Workshop">Workshops</SelectItem>
+                <SelectItem value="Poster">Posters</SelectItem>
                 <SelectItem value="Book">Books</SelectItem>
                 <SelectItem value="Book Chapter">Book Chapters</SelectItem>
                 <SelectItem value="Award">Award Winning</SelectItem>
@@ -255,6 +256,8 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
         return "border-l-primary/70";
       case "Workshop":
         return "border-l-primary/40";
+      case "Poster":
+        return "border-l-primary/35";
       case "Book":
       case "Book Chapter":
         return "border-l-primary/30";

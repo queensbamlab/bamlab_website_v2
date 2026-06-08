@@ -25,7 +25,13 @@ export interface PublicationProps {
   authors: string[];
   venue: string;
   specialIssue?: string;
-  type: "Journal" | "Conference" | "Workshop" | "Book" | "Book Chapter";
+  type:
+    | "Journal"
+    | "Conference"
+    | "Workshop"
+    | "Book"
+    | "Book Chapter"
+    | "Poster";
   workshop?: string;
   award?: string;
   abstract?: string;
@@ -34,6 +40,37 @@ export interface PublicationProps {
 }
 
 export const Publications: PublicationProps[] = [
+  {
+    year: 2026,
+    title:
+      "Quantifying Delay: Modeling the Impact of Timeliness on Narrative Feedback for Entrustable Professional Activity Assessments in Internal Medicine Training using Artificial Intelligence",
+    authors: [
+      "Yu, E.",
+      "Tian, H.",
+      "Mohamad, F.",
+      "Schultz, K.",
+      "McEwen, L.",
+      "Gauthier, S.",
+      "Braund, H.",
+      "Cofie, N.",
+      "Dalgarno, N.",
+      "Szulewski, A.",
+      "Zulkernine, F.",
+      "Kwan, B. Y. M.",
+    ],
+    venue: "Canadian Medical Education Journal",
+    type: "Journal",
+    accepted: true,
+  },
+  {
+    year: 2025,
+    title:
+      "Non-Contact Blood Glucose Estimation Using PPG and rPPG Techniques",
+    authors: ["Mohamad, F.", "Zulkernine, F."],
+    venue:
+      "CVR-CIAN Conference 2025: The Brain and Integrative Vision, York University (Poster Abstracts)",
+    type: "Poster",
+  },
   {
     year: 2026,
     title:
