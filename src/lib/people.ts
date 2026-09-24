@@ -74,7 +74,7 @@ export const People: Record<
     },
     {
       name: "Amir Eskandari",
-      role: "PhD Student",
+      role: "PhD Candidate",
       date: "Sep 2023",
       email: "Amir.Eskandari@queensu.ca",
       image: "/imgs/people/amir_eskandari.png",

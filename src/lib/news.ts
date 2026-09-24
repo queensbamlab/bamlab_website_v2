@@ -50,6 +50,20 @@ export const upcomingEvents: EventProps[] = [
 
 export const News: NewsProps[] = [
   {
+    date: "Aug 2026",
+    title: "Aman Anand and Amir Eskandari Attend 2026 AI in Finance Summer School",
+    description:
+      "Aman Anand and Amir Eskandari were selected to attend the 2026 AI in Finance Summer School, organized by RBC Borealis at the University of British Columbia (UBC) in Vancouver, and both received financial support from RBC Borealis to participate. During the summer school, each presented a poster based on their published Transactions on Machine Learning Research (TMLR) paper: Aman presented 'ASMa: Asymmetric Spatio-temporal Masking for Skeleton Action Representation Learning,' while Amir presented 'InfGraND: An Influence-Guided GNN-to-MLP Knowledge Distillation.' Amir also took part in the program's challenge and won it. Congratulations to both Aman and Amir!",
+    featured: true,
+  },
+  {
+    date: "Jul 2026",
+    title: "ElderBench Presented at IEEE COMPSAC 2026",
+    description:
+      "Our paper 'ElderBench: Benchmarking Personalized Open-Source LLMs for Older Adults,' was presented at the IEEE Annual Computers, Software, and Applications Conference (COMPSAC) 2026, as part of the Symposium on Cognitive Robotic Systems. The work introduces a benchmark for evaluating how well personalized, open-source large language models can understand and support the needs of older adults, contributing to the lab's broader research on AI-driven tools for healthy aging.",
+    featured: true,
+  },
+  {
     date: "Jan 2026",
     title: "Paper Accepted at TMLR",
     description:
