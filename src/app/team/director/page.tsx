@@ -24,6 +24,9 @@ import {
   directorMembership,
   directorInterests,
   directorApplications,
+  directorEducation,
+  directorTeaching,
+  directorPreviousCourses,
 } from "@/lib/director";
 
 export const metadata: Metadata = {
@@ -185,11 +188,12 @@ const DirectorPage = () => {
               <p>
                 She has taught a wide number of courses in deep learning,
                 cognitive science, and database management systems. Her research
-                has been funded by IBM, CFI, MITACS, NSERC CRD, Discovery and
-                CREATE, OCE VIP, CUTRIC, CIMVHR, SOSCIP and Queen&apos;s. She
-                has published in many reputed journals and international
-                conferences and served on a variety of conference program and
-                grant committees as an expert in big data and machine learning.
+                has been funded by IBM, CFI, MITACS, NSERC CRD, Discovery, RTI
+                and CREATE, NFRF, CFREF Connected Minds, OCE VIP, CUTRIC,
+                CIMVHR, SOSCIP and Queen&apos;s. She has published in many
+                reputed journals and international conferences and served on a
+                variety of conference program and grant committees as an expert
+                in big data and machine learning.
               </p>
             </CardContent>
           </Card>
@@ -234,26 +238,64 @@ const DirectorPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              {directorEducation.map((item, i) => (
+                <div key={i}>
+                  <div className="font-medium">
+                    {item.degree}, {item.year}
+                  </div>
+                  <div className="text-sm text-muted-foreground font-serif">
+                    {item.institution}
+                  </div>
+                  <div className="text-sm text-muted-foreground font-serif">
+                    Thesis: <span className="italic">{item.thesis}</span>
+                  </div>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          {/* Teaching */}
+          <Card className="rounded-md">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-primary">
+                <BookOpen className="h-5 w-5" />
+                Teaching
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {directorTeaching.map((term, i) => (
+                <div key={i}>
+                  <h3 className="font-medium mb-2">{term.term} Courses</h3>
+                  <ul className="space-y-1 text-sm text-muted-foreground font-serif">
+                    {term.courses.map((course, j) => (
+                      <li key={j}>
+                        {course.url ? (
+                          <Link
+                            href={course.url}
+                            target="_blank"
+                            className="underline hover:text-primary duration-200 decoration-primary"
+                          >
+                            {course.code}: {course.name}
+                          </Link>
+                        ) : (
+                          <span>
+                            {course.code}: {course.name}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
               <div>
-                <div className="font-medium">PhD in Computer Science</div>
-                <div className="text-sm text-muted-foreground font-serif">
-                  Queen&apos;s University, 2009
-                </div>
-                <div className="text-sm text-muted-foreground font-serif">
-                  Thesis: &quot;Thesis name&quot;
-                </div>
-              </div>
-              <div>
-                <div className="font-medium">MSc in Computer Science</div>
-                <div className="text-sm text-muted-foreground font-serif">
-                  Lorem Ipsum University, 2004
-                </div>
-              </div>
-              <div>
-                <div className="font-medium">BSc in Computer Science</div>
-                <div className="text-sm text-muted-foreground font-serif">
-                  Lorem Ipsum University, 2000
-                </div>
+                <h3 className="font-medium mb-2">Previously Taught Courses</h3>
+                <ul className="space-y-1 text-sm text-muted-foreground font-serif">
+                  {directorPreviousCourses.map((course, i) => (
+                    <li key={i}>
+                      {course.code}: {course.name}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </CardContent>
           </Card>
@@ -277,12 +319,16 @@ const DirectorPage = () => {
                         {item.workshop && (
                           <>
                             ,{" "}
-                            <Link
-                              href={item.workshop_url ? item.workshop_url : "#"}
-                              className="underline"
-                            >
-                              {item.workshop}
-                            </Link>
+                            {item.workshop_url ? (
+                              <Link
+                                href={item.workshop_url}
+                                className="underline"
+                              >
+                                {item.workshop}
+                              </Link>
+                            ) : (
+                              <span>{item.workshop}</span>
+                            )}
                           </>
                         )}
                       </div>
